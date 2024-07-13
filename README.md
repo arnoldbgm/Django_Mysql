@@ -1,6 +1,23 @@
-# Proyecto Django con Django REST Framework y MySQL
+# Proyecto Django con Django REST Framework y MySQL 🐱‍👤🦾🐍
 
 Este documento proporciona una guía paso a paso sobre cómo configurar un proyecto Django con Django REST Framework y una base de datos MySQL.
+
+## 👏IMPORTANTE AL MOMENTO DE CLONAR
+
+Si quieres saltarte todos los pasos solo clona y ejecuta `pip install -r requirements.txt`, recuerda que el entorno ya esta listo para trabajar con django, django rest framework y mysql, disfrutalo 🦾.
+-
+----
+> [Explicacion] Siempre que instales un nuevo paquete o modifiques tus dependencias, asegúrate de actualizar el archivo `requirements.txt` ejecutando:
+
+```sh
+pip freeze > requirements.txt
+```
+
+Para instalar todas las dependencias listadas en `requirements.txt`, utiliza:
+
+```sh
+pip install -r requirements.txt
+```
 
 ## Paso 1: Crear y activar un entorno virtual
 
@@ -64,28 +81,30 @@ DATABASES = {
 
 Asegúrate de reemplazar `"mydatabase"`, `"mydatabaseuser"`, `"mypassword"` y otros valores con la información correspondiente a tu base de datos.
 
-## Paso 5: Crear una aplicación llamada `restaurante`
+## Paso 5: Crear una aplicación llamada `tienda`
 
-Crea una nueva aplicación dentro de tu proyecto Django llamada `restaurante`:
+Crea una nueva aplicación dentro de tu proyecto Django llamada `tienda`:
 
 ```sh
-python manage.py startapp restaurante
+python manage.py startapp tienda
 ```
 
-Luego, agrega la aplicación `restaurante` a la lista de aplicaciones instaladas en tu archivo `settings.py`:
+Luego, agrega la aplicación `tienda` a la lista de aplicaciones instaladas en tu archivo `settings.py`:
 
 ```python
 INSTALLED_APPS = [
     ...
     'rest_framework',
-    'restaurante',
+    'tienda',
     ...
 ]
 ```
 
 ## Paso 6: Crear los modelos de base de datos
 
-Crea los siguientes modelos dentro del archivo `models.py` de tu aplicación `restaurante`:
+Crea los siguientes modelos dentro del archivo `models.py` de tu aplicación `tienda`:
+
+![image](https://github.com/user-attachments/assets/02fed100-159b-4e0c-86b3-757d53460155)
 
 ```python
 from django.db import models
@@ -106,18 +125,3 @@ class Producto(models.Model):
         return self.nombre
 ```
 
-## IMPORTANTE
-
-Siempre que instales un nuevo paquete o modifiques tus dependencias, asegúrate de actualizar el archivo `requirements.txt` ejecutando:
-
-```sh
-pip freeze > requirements.txt
-```
-
-Para instalar todas las dependencias listadas en `requirements.txt`, utiliza:
-
-```sh
-pip install -r requirements.txt
-```
-
-Con estos pasos, habrás configurado tu entorno de desarrollo Django con Django REST Framework y MySQL, además de crear los modelos necesarios para tu aplicación `restaurante` y manejar adecuadamente las dependencias del proyecto.
