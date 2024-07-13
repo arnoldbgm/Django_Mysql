@@ -4,7 +4,7 @@ Este documento proporciona una guía paso a paso sobre cómo configurar un proye
 
 ## 👏IMPORTANTE AL MOMENTO DE CLONAR
 
-Si quieres saltarte todos los pasos solo clona y ejecuta `pip install -r requirements.txt`, recuerda que el entorno ya esta listo para trabajar con django, django rest framework y mysql, disfrutalo 🦾.
+Si quieres saltarte todos los pasos solo clona, crea tu `entorno virtual (activalo)` y ejecuta `pip install -r requirements.txt`, recuerda que el entorno ya esta listo para trabajar con django, django rest framework y mysql, disfrutalo 🦾.
 -
 ----
 > [Explicacion] Siempre que instales un nuevo paquete o modifiques tus dependencias, asegúrate de actualizar el archivo `requirements.txt` ejecutando:
